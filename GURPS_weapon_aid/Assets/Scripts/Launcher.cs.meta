@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 07f0d493e1d4ffa48bf49c1956513569
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - txtAviso: {instanceID: 0}
+  - painelLogin: {instanceID: 0}
+  - tbNick: {instanceID: 0}
+  - painelSala: {instanceID: 0}
+  - tbSala: {instanceID: 0}
+  - prefabItemSala: {fileID: 5840971531887080476, guid: 29ade18102f8dd842958096896c2b41a,
+      type: 3}
+  - painelSalasExistentes: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
