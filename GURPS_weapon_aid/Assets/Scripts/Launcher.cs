@@ -77,7 +77,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         }
         else
         {
-            txtAviso.text = "<color=#FF0000>" + msg + "</color>";
+            txtAviso.text = "<color=#e64d6e>" + msg + "</color>";
         }
         
        
@@ -89,13 +89,13 @@ public class Launcher : MonoBehaviourPunCallbacks
         string nick = tbNick.text;
         if(nick.Length < 3)
         {
-            ExibirAviso("Nick invalido", TipoAviso.ERRO);
+            ExibirAviso("INVALID NICKNAME", TipoAviso.ERRO);
             return;
         }
         
         PlayerPrefs.SetString("NICK", nick);
 
-        ExibirAviso("Conectando.......", TipoAviso.NORMAL);
+        ExibirAviso("CONNECTING.......", TipoAviso.NORMAL);
         PhotonNetwork.GameVersion = gameVersion;
         PhotonNetwork.LocalPlayer.NickName = nick;
         PhotonNetwork.ConnectUsingSettings();
@@ -107,7 +107,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         string nomesala = tbSala.text;
         if(nomesala.Length < 2)
         {
-            ExibirAviso("Nome Da sala Invalido", TipoAviso.ERRO);
+            ExibirAviso("INVALID ROOM NAME", TipoAviso.ERRO);
             return;
         }
 
@@ -123,18 +123,18 @@ public class Launcher : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinOrCreateRoom(nomeSala, ro, TypedLobby.Default);
         if(criarNova)
         {
-            ExibirAviso("CRIANDO SALA...", TipoAviso.NORMAL);
+            ExibirAviso("CREATING ROOM...", TipoAviso.NORMAL);
         }
         else
         {
-            ExibirAviso("ENTRANDO NA SALA ... ", TipoAviso.NORMAL);
+            ExibirAviso("JOINING ROOM... ", TipoAviso.NORMAL);
         }
     }
 
    
     public override void OnConnectedToMaster()
     {
-        ExibirAviso(string.Format("Conectado em '{0}' ",PhotonNetwork.CloudRegion), TipoAviso.NORMAL);
+        ExibirAviso(string.Format("CONNECTING IN : '{0}' ",PhotonNetwork.CloudRegion), TipoAviso.NORMAL);
         PhotonNetwork.JoinLobby();
     }
 

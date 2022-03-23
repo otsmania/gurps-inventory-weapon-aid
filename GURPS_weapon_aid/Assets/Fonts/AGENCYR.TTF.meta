@@ -3,15 +3,16 @@ guid: fa88df263fd9cbc4789d140096d4ca3c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
+  fontSize: 180
+  forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontName: Agency FB
   fontNames:
   - Agency FB
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9cb3b856b2695bd4581a06a656cff8b7, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
